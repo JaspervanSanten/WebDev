@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<!-- xmlns="http://www.w3.org/1999/xhtml" -->
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- <link rel="stylesheet" href="css/mediocre.css"/> -->
+
+   <!--  CodeMirror -->
+   <link rel="stylesheet" href="js/doc/docs.css">
+   <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+   <link rel="stylesheet" href="node_modules/codemirror/addon/lint/lint.css">
+
+   <script src="node_modules/codemirror/lib/codemirror.js"></script>
+   <script src="node_modules/codemirror/mode/javascript/javascript.js"></script>
+   <script src="node_modules/codemirror/addon/edit/closebrackets.js"></script>
+   <script src="node_modules/codemirror/addon/edit/matchbrackets.js"></script>
+   <script src="node_modules/codemirror/addon/comment/comment.js"></script>
+   <script src="node_modules/codemirror/addon/display/fullscreen.js"></script>
+   <script src="node_modules/codemirror/addon/scroll/annotatescrollbar.js"></script>
+
+   <!-- <script src="//ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script> -->
+   <!-- <script src="http://csslint.net/js/csslint.js"></script> -->
+   <!-- <script src="javascript/CodeMirror/csslint.js"></script> -->
+   <!-- <script src="node_modules/codemirror/addon/lint/lint.js"></script> -->
+   <!-- <script src="node_modules/codemirror/addon/lint/javascript-lint.js"></script> -->
+   <!-- <script src="node_modules/codemirror/addon/lint/json-lint.js"></script> -->
+   <!-- <script src="node_modules/codemirror/addon/lint/css-lint.js"></script> -->
+
+   <!--  Bootstrap  -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <!-- <script id="load_bootstrap" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+   <!-- <link rel="stylesheet" href="javascript/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+   <!-- <script id="load_bootstrap" src="javascript/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+   <!-- <script src="js/theme/night.css"></script> -->
+   <!-- <script src="js/theme/eclipse.css"></script> -->
+
+   <link rel="stylesheet" href="css/mediocre.css">
+   <style>
+      CodeMirror {
+         height: 75vh;
+         resize: vertical;
+         border: 1px solid #999999;
+         resize: both;
+      }
+      textarea.myTextArea {
+         resize: vertical;
+         border: 2px solid brown;
+         resize: both;
+      }
+   </style>
+   <style type="text/css">.CodeMirror {border: 1px solid black;}</style>
+</head>
+
+<body>
+   <div style="clear: both" />
+      <textarea id="myTextArea" rows="Infinity" cols="100%" autofocus="true">
+       CodeMirror.commands.toggleComment = function(cm) {
+          cm.toggleComment();
+       };
+      </textarea>
+   </div>
+
+   <div style="clear: both" />
+
+
+   <script>
+      // var myDoc = new MediocreDocument();
+      // var myApp = application
+      var myCodeMirror = CodeMirror.fromTextArea(myTextArea, {
+         inputStyle: "contenteditable",
+         mode: "javascript",
+         lineNumbers: true,
+         //lint
+         gutters: ["CodeMirror-lint-markers"],
+         lint: true,
+         // theme: "night",
+         // theme: "ice-coder",
+         smartIndent: true,
+         indentWithTabs: true,
+         tabSize: 4,
+         indentUnit: 4,
+         autoCloseBrackets: true,
+         matchBrackets: true,
+         // autoCloseBrackets: "()[]{}\'\'\"\""
+         // autofocus: true,
+         fullScreen: true,
+         undoDepth: 32678,
+
+
+         extraKeys: {
+            "F11": function(cm) {
+               cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+            },
+            "Esc": function(cm) {
+               if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+            },
+            "Ctrl-/": function(cm) {
+               cm.toggleComment();
+            }
+         }
+
+      });
+
+      CodeMirror.commands.toggleComment = function(cm) {
+         cm.toggleComment();
+      };
+      CodeMirror.commands.save = function(cm){
+         cm.save();
+         document.getElementById("justAsimpleTest").innerHTML = "Asocial";
+      };
+      // value: "Just a ransom value",
+      // var element = document.getElementById("myTextArea");
+      // element.innerHTML = "Zou een editor moeten zijn";
+      // document.getElementById("myTextArea").innerHTML = "Zou een editor moeten zijn";
+      // var myCodeMirror = CodeMirror(element, {
+      //   value: "function myScript(){return 100;}\n",
+      //   mode:  "javascript"
+      // });
+      // var myCodeMirror = CodeMirror(function(elt) {
+      //    myTextArea.parentNode.replaceChild(elt, myTextArea);
+      // }, {value: myTextArea.value});
+   </script>
+
+   <style>
+      #draggem
+      {
+         width: 100px;
+         height: 100px;
+         background-color: lightgrey;
+      }
+   </style>
+   <!-- <div id="draggem" style="clear: both"></div> -->
+
+   <script>
+      $("#draggem").draggable();
+      $(".MedicoreMen").draggable();
+   </script>
+</body>
+
+</html>

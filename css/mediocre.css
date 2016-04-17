@@ -1,0 +1,121 @@
+html {
+   height: 99vh;
+}
+body {
+   min-height: 100%;
+}
+
+.MedTabDiv {
+   /*background-color: white;*/
+   height: calc(99vh);
+   align-content: center;
+   width: 99%;
+   padding-left: 3px;
+   padding-right: 3px;
+   margin: 5px;
+   border-radius: 1px;
+   border: solid blue 1px ;
+   /*float: left;*/
+   resize: vertical;
+   /*overflow: auto;*/
+   /*display: inline-block;*/
+}
+.MedTabPane {
+   background-color: white;
+   min-height: 80vh;
+   width: 100%;
+   padding: 3px;
+   /*padding-right: 3px;*/
+   /*margin: 5px;*/
+   /*border-radius: 15px;*/
+   /*border: none ;*/
+   border: solid green 1px ;
+   /*border: solid brown 2px ;*/
+   /*float: left;*/
+   resize: both;
+   /*overflow: auto;*/
+   /*display: inline-block;*/
+}
+
+.RobKnobblin {
+   color: pink;
+   font-size: small;
+}
+.Megalomaniacal {
+   color: darkred;
+}
+
+.information {
+   position: relative;
+   font-size: 18px;
+   align-content: left;
+   color: darkred;
+   background-color: lightgrey;
+   /*height: 150px;*/
+   width: 200px;
+   padding-left: 3px;
+   padding-right: 3px;
+   margin: 5px;
+   border-radius: 5px;
+   border: solid orange 2px ;
+   float: left;
+   resize: none;
+   overflow: auto;
+   display: inline-block;
+}
+
+.MedicoreMen {
+   position: relative;
+   font-size: 18px;
+   align-content: center;
+   color: darkred;
+   background-color: orange;
+   height: 150px;
+   width: 200px;
+   padding-left: 3px;
+   padding-right: 3px;
+   margin: 5px;
+   border-radius: 15px 30px 25px 25px ;
+   border-top: solid brown 2px ;
+   border-left: solid 2px brown;
+   border-bottom: dotted 4px brown;
+   border-right: dotted 3px brown;
+   float: left;
+   resize: both;
+   overflow: auto;
+   display: inline-block;
+}
+
+/* Tooltip text */
+.MedicoreMen .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.MedicoreMen:hover .tooltiptext {
+    visibility: visible;
+}
+
+CodeMirror {
+   /*border: 1px solid #eee;*/
+   height: 333px;
+   resize: vertical;
+   border: 1px solid #999999;
+}
+textarea.myTextArea {
+   resize: vertical;
+   border: 2px solid brown;
+   border-radius: 15px;
+   height: 333px;
+   resize: both;
+}

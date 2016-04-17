@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<!-- xmlns="http://www.w3.org/1999/xhtml" -->
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="stylesheet" href="css/mediocre.css"/>
+
+   <!--  jQuery -->
+   <!-- type="text/javascript" -->
+   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" id="load_jquery"></script> -->
+   <script src="javascript/jquery-1.12.3.min.js"></script>
+
+   <!--  jQuery UI -->
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> -->
+   <script src="javascript/jquery-ui/1.11.4/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+   <div class="information">
+      <ul>
+         <li id="jquery_info"></li>
+         <li id="bootstrap_info"></li>
+         <li id="codemirror_info"></li>
+      </ul>
+   </div>
+   <script  type="text/javascript" >
+      if ((typeof jQuery) != "undefined"){
+         document.getElementById("jquery_info").innerHTML = "jQuery is enabled";
+      }else {
+         document.getElementById("jquery_info").innerHTML = "jQuery is disabled";
+      }
+   </script>
+</body>
+
+</html>
