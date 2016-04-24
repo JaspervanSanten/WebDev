@@ -5,20 +5,92 @@ body {
    min-height: 100%;
 }
 
-.MedTabDiv {
+
+.topNudgeBar {
+   margin: 5px;
+   padding: 20px;
+   border: dashed green 1px;
+   box-sizing: border-box;
+}
+
+/*#topInfo {
+   font-size: 10px;
+   width: ;
+   margin: 0px;
+   padding: 2px 10px;
+   border: solid blue 1px;
+   border-radius: 10px;
+   background-color: lightblue;
+   box-sizing: border-box;
+}*/
+
+.infoListItem {
+   font-size: 10px;
+   width: ;
+   margin: 5px 0px 0px 10px;
+   padding: 2px 10px;
+   border: solid blue 1px;
+   border-radius: 10px;
+   background-color: lightblue;
+   box-sizing: border-box;
+   list-style-type: none;
+}
+
+#mainWrapper {
    /*background-color: white;*/
-   height: calc(99vh);
-   align-content: center;
-   width: 99%;
+   min-height: calc(20vh);
+   /*height: auto;*/
+   /*align-content: center;*/
+   width: 100%;
+   padding-top: 3px;
    padding-left: 3px;
    padding-right: 3px;
-   margin: 5px;
-   border-radius: 1px;
-   border: solid blue 1px ;
-   /*float: left;*/
+   margin: 0px;
+   border-radius: 5px;
+   border: solid lightblue 2px ;
+   float: left;
    resize: vertical;
-   /*overflow: auto;*/
-   /*display: inline-block;*/
+   overflow: auto;
+   display: inline-block;
+   box-sizing: border-box;
+}
+#mainNavigation {
+   /*background-color: white;*/
+   min-height: calc(20vh);
+   height: 100%;
+   /*align-content: center;*/
+   width: 15%;
+   min-width: 150px;
+   padding-top: 3px;
+   padding-left: 3px;
+   padding-right: 3px;
+   margin: 0px;
+   border-radius: 5px;
+   border: solid lightblue 2px ;
+   /*float: left;*/
+   resize: horizontal;
+   overflow: auto;
+   display: inline-block;
+}
+.MedTabDiv {
+   /*background-color: white;*/
+   min-height: calc(20vh);
+   height: 100%;
+   /*height: auto;*/
+   align-content: center;
+   width: 84%;
+   /*width: 80%;*/
+   padding-top: 3px;
+   padding-left: 3px;
+   padding-right: 3px;
+   margin: 0px;
+   border-radius: 5px;
+   border: solid lightblue 2px ;
+   /*float: left;*/
+   /*resize: horizontal;*/
+   overflow: auto;
+   display: inline-block;
+   box-sizing: border-box;
 }
 .MedTabPane {
    background-color: white;
@@ -29,12 +101,13 @@ body {
    /*margin: 5px;*/
    /*border-radius: 15px;*/
    /*border: none ;*/
-   border: solid green 1px ;
+   /*border: solid green 1px ;*/
    /*border: solid brown 2px ;*/
    /*float: left;*/
    resize: both;
-   /*overflow: auto;*/
-   /*display: inline-block;*/
+   overflow: auto;
+   display: inline-block;
+   box-sizing: border-box;
 }
 
 .RobKnobblin {
@@ -47,7 +120,7 @@ body {
 
 .information {
    position: relative;
-   font-size: 18px;
+   font-size: 12px;
    align-content: left;
    color: darkred;
    background-color: lightgrey;
@@ -64,7 +137,7 @@ body {
    display: inline-block;
 }
 
-.MedicoreMen {
+.MediocreMen {
    position: relative;
    font-size: 18px;
    align-content: center;
@@ -86,8 +159,27 @@ body {
    display: inline-block;
 }
 
+.MediocreMice {
+   position: relative;
+   font-size: 18px;
+   align-content: center;
+   color: darkred;
+   background-color: orange;
+   height: 150px;
+   width: 200px;
+   padding-left: 3px;
+   padding-right: 3px;
+   margin: 5px;
+   border-radius: 15px ;
+   border: green 5px ;
+   float: left;
+   resize: both;
+   overflow: auto;
+   display: inline-block;
+}
+
 /* Tooltip text */
-.MedicoreMen .tooltiptext {
+.MediocreMen .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -102,7 +194,7 @@ body {
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.MedicoreMen:hover .tooltiptext {
+.MediocreMen:hover .tooltiptext {
     visibility: visible;
 }
 
@@ -118,4 +210,9 @@ textarea.myTextArea {
    border-radius: 15px;
    height: 333px;
    resize: both;
+}
+
+.prettyInput {
+   border: blue 1px;
+
 }

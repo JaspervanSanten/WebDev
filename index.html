@@ -1,210 +1,144 @@
-<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-<!-- xmlns="http://www.w3.org/1999/xhtml" -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <h1><b>Mediocre Men Idnex Page</b></h1>
+
+   <!-- jquery -->
+   <script src="javascript/jquery/1.12.3/jquery.min.js"></script>
+   <script src="javascript/jquery-ui/1.11.4/jquery-ui.min.js"></script>
+   <link rel="stylesheet" href="javascript/jquery-ui/1.11.4/jquery-ui.min.css">
+   <!-- bootstrap -->
+   <link rel="stylesheet" href="javascript/bootstrap/3.3.6/css/bootstrap.min.css">
+   <script src="javascript/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
    <link rel="stylesheet" href="css/mediocre.css"/>
 
-   <!--  jQuery -->
-   <!-- type="text/javascript" -->
-   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" id="load_jquery"></script> -->
-   <script src="javascript/jquery-1.12.3.min.js"></script>
+   <title>Mediocre Men Idnex Page</title>
+   <div class="topNudgeBar">
+      <!-- style="float: left; width: 75%" -->
+      <div id="topTitle">
+         <h3>Mediocre enviromnent</h3>
+      </div>
+      <div id="topInfo">
+         <ul id="topInfoList" class="infoList">
+            <li id="infoJquery" class="ui-state-default infoListItem">
+               <script type="text/javascript">
+                  if ((typeof jQuery) != "undefined"){
+                     document.getElementById("infoJquery").innerHTML = "jQuery is enabled";
+                  }else {
+                     document.getElementById("infoJquery").innerHTML = "jQuery is disabled";
+                  }
+               </script>
+            </li>
+            <li id="infoSizes" class="ui-state-default infoListItem">
 
-   <!--  jQuery UI -->
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> -->
-   <script src="javascript/jquery-ui/1.11.4/jquery-ui.min.js"></script>
-
-   <!--  CodeMirror -->
-   <link rel="stylesheet" href="js/doc/docs.css">
-   <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
-   <link rel="stylesheet" href="node_modules/codemirror/addon/lint/lint.css">
-
-   <script src="node_modules/codemirror/lib/codemirror.js"></script>
-   <script src="node_modules/codemirror/mode/javascript/javascript.js"></script>
-   <!-- <script src="node_modules/codemirror/addon/edit/closebrackets.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/edit/matchbrackets.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/comment/comment.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/display/fullscreen.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/scroll/annotatescrollbar.js"></script> -->
-
-   <!-- <script src="//ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script> -->
-   <!-- <script src="http://csslint.net/js/csslint.js"></script> -->
-   <!-- <script src="javascript/CodeMirror/csslint.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/lint/lint.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/lint/javascript-lint.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/lint/json-lint.js"></script> -->
-   <!-- <script src="node_modules/codemirror/addon/lint/css-lint.js"></script> -->
-
-   <!--  Bootstrap  -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-   <!-- <script id="load_bootstrap" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-   <!-- <link rel="stylesheet" href="javascript/bootstrap/3.3.6/css/bootstrap.min.css"> -->
-   <!-- <script id="load_bootstrap" src="javascript/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-
-   <!-- <script src="js/theme/night.css"></script> -->
-   <!-- <script src="js/theme/eclipse.css"></script> -->
-
-   <style>
-      CodeMirror {
-         /*border: 1px solid #eee;*/
-         height: auto;
-         resize: vertical;
-         border: 1px solid #999999;
-      }
-      textarea.myTextArea {
-         resize: vertical;
-         border: 2px solid brown;
-         /*border-radius: 15px;*/
-         /*resize: both;*/
-      }
-   </style>
-   <style type="text/css">.CodeMirror {border: 1px solid black;}</style>
-</head>
-
-<body>
-   <iframe src="infoPage.html">
-      <!-- <div class="information">
-         <ul>
-            <li id="jquery_info"></li>
-            <li id="bootstrap_info"></li>
-            <li id="codemirror_info"></li>
          </ul>
       </div>
-      <script  type="text/javascript" >
-         if ((typeof jQuery) != "undefined"){
-            document.getElementById("jquery_info").innerHTML = "jQuery is enabled";
-         }else {
-            document.getElementById("jquery_info").innerHTML = "jQuery is disabled";
-         }
-      </script> -->
-   </iframe>
-
-   <div style="clear: both; width:100%; background-color: lightgrey" class="container">
-     <h2>Dynamic Tabs</h2>
-     <p><strong>Tip:</strong> Change data-toggle="tab" to data-toggle="pill" to make pills toggable.</p>
-     <ul class="nav nav-pills">
-       <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-       <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-       <li><a data-toggle="tab" href="#menu_editor">Editor</a></li>
-     </ul>
-
-     <div class="tab-content">
-       <div id="home" class="tab-pane fade in active">
-         <h3>HOME</h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-       </div>
-       <div id="menu1" class="tab-pane fade">
-         <h3>Menu 1</h3>
-         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div>
-       <div id="menu_editor" class="tab-pane fade">
-          <iframe src="./codingPage.html">
-
-          </iframe>
-       </div>
-     </div>
    </div>
 
-   <div style="clear: both" />
-   <iframe src="./codingPage.html">
-
-   </iframe>
-   <div style="clear: both" />
-
-
-
    <script>
-      // var myDoc = new MediocreDocument();
-      // var myApp = application
-      var myCodeMirror = CodeMirror.fromTextArea(myTextArea, {
-         inputStyle: "contenteditable",
-         mode: "javascript",
-         lineNumbers: true,
-         //lint
-         gutters: ["CodeMirror-lint-markers"],
-         lint: true,
-         // theme: "night",
-         // theme: "ice-coder",
-         smartIndent: true,
-         indentWithTabs: true,
-         tabSize: 4,
-         indentUnit: 4,
-         autoCloseBrackets: true,
-         matchBrackets: true,
-         // autoCloseBrackets: "()[]{}\'\'\"\""
-         // autofocus: true,
-         fullScreen: true,
-         undoDepth: 32678,
-
-
-         extraKeys: {
-            "F11": function(cm) {
-               cm.setOption("fullScreen", !cm.getOption("fullScreen"));
-            },
-            "Esc": function(cm) {
-               if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
-            },
-            "Ctrl-/": function(cm) {
-               cm.toggleComment();
-            }
-         }
-
-      });
-
-      CodeMirror.commands.toggleComment = function(cm) {
-         cm.toggleComment();
-      };
-      CodeMirror.commands.save = function(cm){
-         cm.save();
-         document.getElementById("justAsimpleTest").innerHTML = "Asocial";
-      };
+     $(function() {
+      //   $("#mainNavigation").accordion();
+        //   $("#mainNavigation").sortable();
+          $(".infoList").sortable();
+     });
    </script>
 
-   <!-- /*<style>
-      #draggem
-      {
-         width: 100px;
-         height: 100px;
-         background-color: lightgrey;
-      }
-   </style>
-   <div id="draggem" style="clear: both"></div>
+</head>
+<body>
 
+<div id="mainWrapper">
+   <div id="mainNavigation">
+      <h3>Files</h3>
+      <div>
+      </div>
+      <h3>Files too</h3>
+      <div>
+      </div>
+      <h3>Files ehj</h3>
+      <div>
+      </div>
+      <!-- <ul>
+         <li></li>
+         <ul>
+            <li>Files</li>
+         </ul>
+         <li>something else</li>
+      </ul> -->
+   </div>
    <script>
-      $("#draggem").draggable();
-      $(".MedicoreMen").draggable();
-   </script>*/ -->
+     $(function() {
+        $("#mainNavigation").accordion();
+        //   $("#mainNavigation").sortable();
+     });
+   </script>
 
-
-
-   <!-- <div class="RobKnobblin">
-      <p>I'm trying to focus whilst Rob the Throbbin' Knob is jabberin' about.</p>
+   <div id="mainContainer" class="container MedTabDiv">
+     <!-- <h3>Mediocre enviromnent</h3> -->
+     <ul class="nav nav-tabs">
+       <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+       <li><a data-toggle="tab" href="#info">Information</a></li>
+       <li><a data-toggle="tab" href="#editor">Editor</a></li>
+       <li><a data-toggle="tab" href="#medman">Mediocre</a></li>
+     </ul>
+     <br>
+     <p>
+        <div class="tab-content">
+           <div id="home" class="tab-pane fade">
+             <strong>Note:</strong>
+             This exmaple shows how to create a basic navigation tab.
+             It is not toggleable/dynamic yet (you can't click on the links to display
+             different content)- see the last example in the Bootstrap Tabs
+             and Pills Tutorial to find out how this can be done.
+             <form>
+                <fieldset>
+                   <legend>Claim of Mediocrity</legend>
+                  <input type="text" name="firstName" class="prettyInput">
+                  <input type="text" name="lastName" class="prettyInput">
+                  <input type="submit" value="Submit">
+               </fieldset>
+            </form>
+           </div>
+           <!-- <div id="info" class="tab-pane fade MedTabPane"> -->
+              <iframe id="info" class="tab-pane fade MedTabPane" src="infoPage.html">
+                <!-- class="MedTabPane"  -->
+              </iframe>
+           <!-- </div> -->
+           <!-- <div id="editor" class="tab-pane fade MedTabPane"> -->
+              <iframe id="editor" class="tab-pane fade MedTabPane" src="codingPage.html">
+              </iframe>
+           <!-- </div> -->
+           <!-- <div id="medman" class="tab-pane fade MedTabPane"> -->
+              <iframe id="medman" class="tab-pane fade MedTabPane" src="medman.html">
+              </iframe>
+           <!-- </div> -->
+        </div>
+     </p>
    </div>
-   <div class="MedicoreMen">
-      <p>The awesome MM's are rubbin' themselves against the Rob.</p>
-   </div>
-   <div class="MedicoreMen">
-      <p>The awesome MM's are rubbin' themselves against the Rob.</p>
-   </div>
-   <div class="MedicoreMen">
-      <p>
-         <span class="tooltiptext">Wegdy Will wants whateverone whishess.</span>
-         The awesome MM's are rubbin' themselves against the Rob.
-      </p>
-   </div> -->
+</div>
+<script>
+   // var containerHeight = $(.container).height;
+   var windowHeight = $(document).height();
+   var topNudgeBarHeight = $('.topNudgeBar').height();
+   var myBodyHeight = windowHeight - topNudgeBarHeight;
+   var windowWidth = $(document).width();
+   var topNudgeBarWidth = $('.topNudgeBar').width();
+   var myBodyWidth = windowWidth - topNudgeBarWidth;
+   $('#mainContainer').height = myBodyHeight;
+   // $('.container MedTabDiv').style.maxHeight = myBodyHeight -50;
+   var sizesHtml = "<li ></li>";
+   sizesHtml += "<li id='mainHeight'>        Window: "    + $(document).height() + "x" +$(document).width()+ "</li>";
+   sizesHtml += "<li id='topNudgeBarHeight'> Top Bar: " + $('.topNudgeBar').height() + "x" + $('.topNudgeBar').width(); + "</li>";
+   sizesHtml += "<li id='myBodyHeight'>      Body: "    + myBodyHeight + "x" + myBodyWidth + "</li>";
+   document.getElementById("infoSizes").innerHTML = sizesHtml;
 
-
-
+   // $('.container').add('<div>windowHeight</div>');
+   // var sizeDiv = document.createElement('div');
+   // sizeDiv.style.left = '32px'; sizeDiv.style.top = '-16px';
+   // sizeDiv.id = 'sizeDiv';
+   // sizeDiv.innerHTML =a '<span>'+ windowHeight + '</span>';
+   // $('.topNudgeBar').appendChild(sizeDiv);
+</script>
 </body>
-
-
-
-
-
-
 </html>
